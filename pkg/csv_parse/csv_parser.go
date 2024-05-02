@@ -53,11 +53,11 @@ func Csv_factory(in_sting string) Csv_object {
 			filled_row := fill_empty_values.ReplaceAll([]byte(line), []byte(",none,"))
 
 			// split row at separator
-			var row = csv_row{}
+			var row = Csv_row{}
 			for _, val := range strings.Split(strings.TrimSuffix(string(filled_row), separator), separator) {
 
 				clean_values = append(clean_values, clean_string(string(val)))
-				row = csv_row{index: i, raw_data: line, separator: separator, values: clean_values, size: len(clean_values)}
+				row = Csv_row{index: i, raw_data: line, separator: separator, values: clean_values, size: len(clean_values)}
 			}
 			result.values = append(result.values, row)
 
@@ -67,7 +67,7 @@ func Csv_factory(in_sting string) Csv_object {
 	return result
 }
 
-func Get_column(column_name string, data csv_object) []string {
+func Get_column(column_name string, data Csv_object) []string {
 
 	var result []string
 	// find index of column
