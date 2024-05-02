@@ -1,14 +1,7 @@
 package csv_parse
 
 import (
-	"bytes"
-	"encoding/base64"
-	"encoding/json"
-	"fmt"
-	"io"
-	"net/http"
 	"regexp"
-	"strconv"
 	"strings"
 	"unicode"
 )
