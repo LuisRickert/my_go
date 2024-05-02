@@ -17,7 +17,7 @@ type Csv_row struct {
 type Csv_object struct {
 	Column_names []string
 	values       []Csv_row
-	row_size     inC
+	row_size     int
 }
 
 
