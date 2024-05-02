@@ -30,7 +30,7 @@ func clean_string(in string) string {
 	}, in)
 }
 
-func Csv_factory(in_sting string) csv_object {
+func Csv_factory(in_sting string) Csv_object {
 	separator := ","
 
 	var emptyValues = []Csv_row{}
