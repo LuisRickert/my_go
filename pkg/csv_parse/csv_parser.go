@@ -16,7 +16,7 @@ type Csv_row struct {
 }
 type Csv_object struct {
 	column_names []string
-	values       []csv_row
+	values       []Csv_row
 	row_size     int
 }
 
@@ -33,8 +33,8 @@ func clean_string(in string) string {
 func Csv_factory(in_sting string) csv_object {
 	separator := ","
 
-	var emptyValues = []csv_row{}
-	result := csv_object{values: emptyValues}
+	var emptyValues = []Csv_row{}
+	result := Csv_object{values: emptyValues}
 
 	fill_empty_values := regexp.MustCompile(`,,`)
 
