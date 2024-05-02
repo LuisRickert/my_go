@@ -15,9 +15,9 @@ type Csv_row struct {
 	index     int
 }
 type Csv_object struct {
-	column_names []string
+	Column_names []string
 	values       []Csv_row
-	row_size     int
+	row_size     inC
 }
 
 
@@ -46,7 +46,7 @@ func Csv_factory(in_sting string) Csv_object {
 				clean_values = append(clean_values, clean_string(name))
 			}
 
-			result.column_names = clean_values
+			result.Column_names = clean_values
 			result.row_size = len(clean_values)
 		} else {
 			// parse the row
@@ -72,7 +72,7 @@ func Get_column(column_name string, data Csv_object) []string {
 	var result []string
 	// find index of column
 	idx := -1
-	for i, val := range data.column_names {
+	for i, val := range data.Column_names {
 		if column_name == val {
 			idx = i
 			break
