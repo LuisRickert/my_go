@@ -30,7 +30,7 @@ func clean_string(in string) string {
 	}, in)
 }
 
-func csv_factory(in_sting string) csv_object {
+func Csv_factory(in_sting string) csv_object {
 	separator := ","
 
 	var emptyValues = []csv_row{}
@@ -67,7 +67,7 @@ func csv_factory(in_sting string) csv_object {
 	return result
 }
 
-func get_column(column_name string, data csv_object) []string {
+func Get_column(column_name string, data csv_object) []string {
 
 	var result []string
 	// find index of column
