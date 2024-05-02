@@ -7,14 +7,14 @@ import (
 )
 
 // define csv struct
-type csv_row struct {
+type Csv_row struct {
 	raw_data  string
 	separator string
 	size      int
 	values    []string
 	index     int
 }
-type csv_object struct {
+type Csv_object struct {
 	column_names []string
 	values       []csv_row
 	row_size     int
